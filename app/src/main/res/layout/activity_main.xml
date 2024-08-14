@@ -7,14 +7,31 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <CheckBox
-        android:id="@+id/Cb"
-        android:layout_width="match_parent"
+    <RadioGroup
+        android:id="@+id/Rg"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Dez"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
+        <RadioButton
+            android:id="@+id/zeroRb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/zero"/>
+        <RadioButton
+            android:id="@+id/umRb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1sp"
+            android:text="@string/um" />
+    </RadioGroup>
+
+
+
+
+
+
 
     <TextView
         android:id="@+id/contadorTv"
@@ -25,7 +42,7 @@
         app:layout_constraintBottom_toTopOf="@id/cliqueBt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Cb"/>
+        app:layout_constraintTop_toBottomOf="@id/Rg"/>
 
     <Button
         android:id="@+id/cliqueBt"

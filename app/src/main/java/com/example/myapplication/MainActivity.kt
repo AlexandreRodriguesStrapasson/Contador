@@ -12,18 +12,5 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        amd = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(amd.main)
-
-        amd.Cb.setOnClickListener {
-            contador = if(amd.Cb.isActivated)
-                amd.Cb.text.toString().toInt()
-            else 0
-        }
-
-        amd.cliqueBt.setOnClickListener {
-            amd.contadorTv.text = (++contador).toString()
-        }
     }
 }
